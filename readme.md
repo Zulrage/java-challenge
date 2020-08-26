@@ -12,19 +12,20 @@ Application (with the embedded H2 database) is ready to be used ! You can access
 
 
 
-### Instructions
 
-- Fork this project
-- Enhance the code in any ways you can see, you are free!. Some possibilities:
-  - Add tests
-  - Change syntax
-  - Improve doc and comments
-  - Fix any bug you might find
-- Edit readme.md and add any comments. It can be about what you did, what you would have done if you had more time, etc.
-- Send us the link of your fork
+#### Changelog
+ - Formatting, override and add javadoc (did not add javadoc for the service implementation for maintenability (reuse override javadoc))
+ - Change name for employee service and implementation to IEmployeeService for interface and EmployeeService for impl (matter of preference, but Interface starting with I are easilly seen and understood)
+ - Add some test
+ - Add error handling for the application
+ -- This could be overengineering the current application, but pertinent error are valuable for maintenability
+ - Add DTO and mapping to not use directly the DB entities
+ -- Returning DB entities as is could lead to numerous security issues in the future.
+ - Remove the get() for optional to a orElseThrow with a custom exception
 
-#### Restrictions
-- use java 8
+#### What could have been done
+- More unttesting (especially on the controller)
+- Split in different project (lib and common lib project)
 
 
 #### What we will look for
@@ -35,3 +36,4 @@ Application (with the embedded H2 database) is ready to be used ! You can access
 - Appropriate usage of packages
 - Is the application running as expected
 - No performance issues
+
